@@ -1,0 +1,6 @@
+{
+  "brute_force": {"failures": 8, "window_minutes": 5},
+  "large_outbound": {"megabytes": 25},
+  "off_hours_login": {"business_start_hour": 8, "business_end_hour": 18},
+  "correlation": {"max_gap_minutes": 90}
+}

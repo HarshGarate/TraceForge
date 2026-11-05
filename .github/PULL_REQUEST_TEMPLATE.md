@@ -1,0 +1,4 @@
+- [ ] Tests added or updated (`python -m pytest`)
+- [ ] `ruff check .` passes
+- [ ] `python scripts/generate_rule_docs.py` run if rules changed
+- [ ] CHANGELOG.md and docs updated

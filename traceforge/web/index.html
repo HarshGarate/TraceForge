@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TraceForge · Incident Console</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231b1d2c'/%3E%3Cpath d='M7 9h18M16 9v15' stroke='%2333d6c9' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand" id="brand">
+    <svg viewBox="0 0 32 32"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34e1d1"/><stop offset="1" stop-color="#5b6cff"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="#232537"/><path d="M7 9.5h18M16 9.5V25" stroke="url(#lg)" stroke-width="3.6" stroke-linecap="round"/><circle cx="25" cy="22" r="2.6" fill="#f0485a"/></svg>
+    <div>TRACEFORGE<small>INCIDENT CONSOLE</small></div>
+  </div>
+  <nav class="nav" id="nav"></nav>
+  <div class="sp"></div>
+  <button class="btn primary" id="btn-import"><span id="imp-ico"></span> Add logs</button>
+  <div class="case-pill" id="case-pill" title="Edit investigation details or start a new investigation"></div>
+</header>
+<main id="view"></main>
+<div class="toasts" id="toasts"></div>
+<div id="overlay"></div>
+<input type="file" id="file" multiple hidden>
+<script src="/static/charts.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>
