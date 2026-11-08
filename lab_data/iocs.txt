@@ -1,0 +1,6 @@
+198.51.100.250
+evil.example.test
+44d88612fea8a8f36de82e1278abb02f
+svc_tmp
+http://evil.example.test/payload.bin
+analyst-phish@example.test

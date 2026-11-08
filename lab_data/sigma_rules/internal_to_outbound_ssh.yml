@@ -1,0 +1,13 @@
+title: Internal Host Opens Outbound SSH
+id: 5a3d1c10-0000-4000-8000-000000000002
+status: experimental
+description: Outbound SSH from a private address to a public one
+tags: [attack.command_and_control, attack.t1572]
+level: medium
+detection:
+  selection:
+    dst_port: 22
+    src_ip|cidr: ['10.0.0.0/8', '192.168.0.0/16']
+  filter_internal:
+    dst_ip|cidr: ['10.0.0.0/8', '192.168.0.0/16']
+  condition: selection and not filter_internal

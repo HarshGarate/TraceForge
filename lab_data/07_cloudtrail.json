@@ -1,0 +1,220 @@
+{
+ "Records": [
+  {
+   "eventTime": "2026-03-10T01:00:00Z",
+   "eventSource": "signin.amazonaws.com",
+   "eventName": "ConsoleLogin",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.50",
+   "userAgent": "aws-cli/2.15",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "devops1",
+    "arn": "arn:aws:iam::123456789012:user/devops1"
+   },
+   "responseElements": {
+    "ConsoleLogin": "Failure"
+   },
+   "additionalEventData": {
+    "MFAUsed": "No"
+   }
+  },
+  {
+   "eventTime": "2026-03-10T01:00:40Z",
+   "eventSource": "signin.amazonaws.com",
+   "eventName": "ConsoleLogin",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.50",
+   "userAgent": "aws-cli/2.15",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "devops1",
+    "arn": "arn:aws:iam::123456789012:user/devops1"
+   },
+   "responseElements": {
+    "ConsoleLogin": "Failure"
+   },
+   "additionalEventData": {
+    "MFAUsed": "No"
+   }
+  },
+  {
+   "eventTime": "2026-03-10T01:01:20Z",
+   "eventSource": "signin.amazonaws.com",
+   "eventName": "ConsoleLogin",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.50",
+   "userAgent": "aws-cli/2.15",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "devops1",
+    "arn": "arn:aws:iam::123456789012:user/devops1"
+   },
+   "responseElements": {
+    "ConsoleLogin": "Failure"
+   },
+   "additionalEventData": {
+    "MFAUsed": "No"
+   }
+  },
+  {
+   "eventTime": "2026-03-10T01:02:00Z",
+   "eventSource": "signin.amazonaws.com",
+   "eventName": "ConsoleLogin",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.50",
+   "userAgent": "aws-cli/2.15",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "devops1",
+    "arn": "arn:aws:iam::123456789012:user/devops1"
+   },
+   "responseElements": {
+    "ConsoleLogin": "Failure"
+   },
+   "additionalEventData": {
+    "MFAUsed": "No"
+   }
+  },
+  {
+   "eventTime": "2026-03-10T01:02:40Z",
+   "eventSource": "signin.amazonaws.com",
+   "eventName": "ConsoleLogin",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.50",
+   "userAgent": "aws-cli/2.15",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "devops1",
+    "arn": "arn:aws:iam::123456789012:user/devops1"
+   },
+   "responseElements": {
+    "ConsoleLogin": "Failure"
+   },
+   "additionalEventData": {
+    "MFAUsed": "No"
+   }
+  },
+  {
+   "eventTime": "2026-03-10T01:03:20Z",
+   "eventSource": "signin.amazonaws.com",
+   "eventName": "ConsoleLogin",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.50",
+   "userAgent": "aws-cli/2.15",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "devops1",
+    "arn": "arn:aws:iam::123456789012:user/devops1"
+   },
+   "responseElements": {
+    "ConsoleLogin": "Failure"
+   },
+   "additionalEventData": {
+    "MFAUsed": "No"
+   }
+  },
+  {
+   "eventTime": "2026-03-10T01:06:00Z",
+   "eventSource": "signin.amazonaws.com",
+   "eventName": "ConsoleLogin",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.50",
+   "userAgent": "aws-cli/2.15",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "devops1",
+    "arn": "arn:aws:iam::123456789012:user/devops1"
+   },
+   "responseElements": {
+    "ConsoleLogin": "Success"
+   },
+   "additionalEventData": {
+    "MFAUsed": "No"
+   }
+  },
+  {
+   "eventTime": "2026-03-10T01:15:00Z",
+   "eventSource": "iam.amazonaws.com",
+   "eventName": "CreateUser",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.50",
+   "userAgent": "aws-cli/2.15",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "devops1",
+    "arn": "arn:aws:iam::123456789012:user/devops1"
+   },
+   "requestParameters": {
+    "userName": "backdoor-user"
+   }
+  },
+  {
+   "eventTime": "2026-03-10T01:16:00Z",
+   "eventSource": "iam.amazonaws.com",
+   "eventName": "AttachUserPolicy",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.50",
+   "userAgent": "aws-cli/2.15",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "devops1",
+    "arn": "arn:aws:iam::123456789012:user/devops1"
+   },
+   "requestParameters": {
+    "userName": "backdoor-user",
+    "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+   }
+  },
+  {
+   "eventTime": "2026-03-10T01:20:00Z",
+   "eventSource": "cloudtrail.amazonaws.com",
+   "eventName": "StopLogging",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.50",
+   "userAgent": "aws-cli/2.15",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "devops1",
+    "arn": "arn:aws:iam::123456789012:user/devops1"
+   },
+   "requestParameters": {
+    "name": "org-trail"
+   }
+  },
+  {
+   "eventTime": "2026-03-10T01:25:00Z",
+   "eventSource": "s3.amazonaws.com",
+   "eventName": "GetObject",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.50",
+   "userAgent": "aws-cli/2.15",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "devops1",
+    "arn": "arn:aws:iam::123456789012:user/devops1"
+   },
+   "errorCode": "AccessDenied",
+   "errorMessage": "Access Denied"
+  },
+  {
+   "eventTime": "2026-03-10T10:00:00Z",
+   "eventSource": "signin.amazonaws.com",
+   "eventName": "ConsoleLogin",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "10.0.1.15",
+   "userAgent": "aws-cli/2.15",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "analyst1",
+    "arn": "arn:aws:iam::123456789012:user/analyst1"
+   },
+   "responseElements": {
+    "ConsoleLogin": "Success"
+   },
+   "additionalEventData": {
+    "MFAUsed": "Yes"
+   }
+  }
+ ]
+}

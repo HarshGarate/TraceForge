@@ -1,0 +1,103 @@
+{
+ "Records": [
+  {
+   "eventTime": "2026-03-13T22:00:00Z",
+   "eventSource": "signin.amazonaws.com",
+   "eventName": "ConsoleLogin",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.45",
+   "userAgent": "Mozilla/5.0",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "devops1",
+    "arn": "arn:aws:iam::123456789012:user/devops1"
+   },
+   "responseElements": {
+    "ConsoleLogin": "Failure"
+   },
+   "additionalEventData": {
+    "MFAUsed": "No"
+   },
+   "resources": [
+    {
+     "ARN": "x"
+    }
+   ]
+  },
+  {
+   "eventTime": "2026-03-13T22:05:00Z",
+   "eventSource": "signin.amazonaws.com",
+   "eventName": "ConsoleLogin",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.45",
+   "userAgent": "Mozilla/5.0",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "devops1",
+    "arn": "arn:aws:iam::123456789012:user/devops1"
+   },
+   "responseElements": {
+    "ConsoleLogin": "Success"
+   },
+   "additionalEventData": {
+    "MFAUsed": "No"
+   }
+  },
+  {
+   "eventTime": "2026-03-13T22:07:00Z",
+   "eventSource": "iam.amazonaws.com",
+   "eventName": "CreateUser",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.45",
+   "userAgent": "Mozilla/5.0",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "devops1",
+    "arn": "arn:aws:iam::123456789012:user/devops1"
+   }
+  },
+  {
+   "eventTime": "2026-03-13T22:08:00Z",
+   "eventSource": "iam.amazonaws.com",
+   "eventName": "AttachUserPolicy",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.45",
+   "userAgent": "Mozilla/5.0",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "devops1",
+    "arn": "arn:aws:iam::123456789012:user/devops1"
+   },
+   "requestParameters": {
+    "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+   }
+  },
+  {
+   "eventTime": "2026-03-13T22:12:00Z",
+   "eventSource": "cloudtrail.amazonaws.com",
+   "eventName": "StopLogging",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "203.0.113.45",
+   "userAgent": "Mozilla/5.0",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "devops1",
+    "arn": "arn:aws:iam::123456789012:user/devops1"
+   }
+  },
+  {
+   "eventTime": "2026-03-13T22:13:00Z",
+   "eventSource": "s3.amazonaws.com",
+   "eventName": "ListBuckets",
+   "awsRegion": "us-east-1",
+   "sourceIPAddress": "s3.amazonaws.com",
+   "userAgent": "Mozilla/5.0",
+   "userIdentity": {
+    "type": "IAMUser",
+    "userName": "devops1",
+    "arn": "arn:aws:iam::123456789012:user/devops1"
+   },
+   "errorCode": "AccessDenied"
+  }
+ ]
+}

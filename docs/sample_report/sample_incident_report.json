@@ -1,0 +1,1387 @@
+{
+  "tool": "TraceForge 1.2.0",
+  "report_id": "TF-20261105-7C271422",
+  "status": "DRAFT",
+  "status_reasons": [
+    "4 of 4 incident(s) have no analyst verdict (INC-001, INC-002, INC-003, INC-004)."
+  ],
+  "case": "Sample incident",
+  "analyst": "Sample Analyst",
+  "generated_utc": "2026-11-05T10:25:16.077993+00:00",
+  "evidence_files": [
+    {
+      "filename": "endpoint_events.json",
+      "sha256": "8c2b69bee66f83481ef839fdc8eebe3fbb63047a5d07b169b243057056c56b19",
+      "rows_read": 6,
+      "rows_kept": 6,
+      "bad_timestamp": 0,
+      "invalid_ips": 0,
+      "mapped_fields": {
+        "timestamp": "@timestamp",
+        "src_ip": "source.ip",
+        "user": "user.name",
+        "event_type": "event.action",
+        "host": "host.name",
+        "message": "message",
+        "command": "process.command_line"
+      },
+      "unmapped_columns": [],
+      "truncated": false
+    },
+    {
+      "filename": "firewall.csv",
+      "sha256": "7917a8b1f71554018c5af0c19d6244215d1b07ea485d91b6e094d564c657d2fa",
+      "rows_read": 86,
+      "rows_kept": 86,
+      "bad_timestamp": 0,
+      "invalid_ips": 0,
+      "mapped_fields": {
+        "timestamp": "epoch",
+        "src_ip": "src",
+        "dst_ip": "dst",
+        "dst_port": "dport",
+        "event_type": "action",
+        "bytes_out": "bytes_sent"
+      },
+      "unmapped_columns": [],
+      "truncated": false
+    },
+    {
+      "filename": "vpn_auth.csv",
+      "sha256": "da24574c53e0bb9a2d0dec5b6f22bb1868af95b68a3149570293c75a1193fd4b",
+      "rows_read": 134,
+      "rows_kept": 134,
+      "bad_timestamp": 0,
+      "invalid_ips": 0,
+      "mapped_fields": {
+        "timestamp": "timestamp",
+        "src_ip": "client_ip",
+        "user": "username",
+        "event_type": "event",
+        "host": "hostname",
+        "message": "message"
+      },
+      "unmapped_columns": [],
+      "truncated": false
+    },
+    {
+      "filename": "web_access.json",
+      "sha256": "66e4df55ffefb9f517f3bccda1d44161b1384267df82450c69f7a8d844f46938",
+      "rows_read": 329,
+      "rows_kept": 329,
+      "bad_timestamp": 0,
+      "invalid_ips": 0,
+      "mapped_fields": {
+        "timestamp": "time",
+        "src_ip": "client_ip",
+        "host": "host",
+        "status_code": "status",
+        "url": "uri"
+      },
+      "unmapped_columns": [
+        "method",
+        "response_bytes"
+      ],
+      "truncated": false
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "INC-001",
+      "title": "Multi-stage activity involving 198.51.100.77, 203.0.113.45, user-01",
+      "start": "2026-03-13T21:58:00+00:00",
+      "end": "2026-03-13T23:52:20+00:00",
+      "severity": "critical",
+      "confidence": 95,
+      "confidence_label": "High",
+      "confidence_factors": [
+        [
+          "Baseline for any rule-based finding",
+          20
+        ],
+        [
+          "9 independent detection rule(s) fired",
+          30
+        ],
+        [
+          "Corroborated by 4 different log sources",
+          15
+        ],
+        [
+          "Activity spans 6 ATT&CK tactics (kill-chain progression)",
+          15
+        ],
+        [
+          "Evidence of success/impact (login after failures, persistence or data transfer)",
+          10
+        ],
+        [
+          "Matches an analyst-recorded IOC",
+          10
+        ]
+      ],
+      "entities": {
+        "ip": [
+          "203.0.113.45",
+          "10.0.5.20",
+          "198.51.100.77"
+        ],
+        "user": [
+          "user-01"
+        ],
+        "host": [
+          "dc01"
+        ]
+      },
+      "finding_ids": [
+        "F003",
+        "F004",
+        "F005",
+        "F006",
+        "F007",
+        "F008",
+        "F009",
+        "F010",
+        "F011",
+        "F012",
+        "F013",
+        "F014",
+        "F015",
+        "F016"
+      ],
+      "event_ids": [
+        "E000439",
+        "E000440",
+        "E000441",
+        "E000442",
+        "E000443",
+        "E000444",
+        "E000445",
+        "E000446",
+        "E000447",
+        "E000448",
+        "E000449",
+        "E000450",
+        "E000451",
+        "E000452",
+        "E000453",
+        "E000454",
+        "E000455",
+        "E000456",
+        "E000457",
+        "E000458",
+        "E000459",
+        "E000460",
+        "E000461",
+        "E000462",
+        "E000463",
+        "E000464",
+        "E000465",
+        "E000466",
+        "E000467",
+        "E000468",
+        "E000469",
+        "E000470",
+        "E000471",
+        "E000472",
+        "E000473",
+        "E000474",
+        "E000475",
+        "E000476",
+        "E000477",
+        "E000478",
+        "E000479",
+        "E000480",
+        "E000481",
+        "E000482",
+        "E000483",
+        "E000484",
+        "E000485",
+        "E000486",
+        "E000487",
+        "E000488",
+        "E000489",
+        "E000490",
+        "E000491",
+        "E000492",
+        "E000493",
+        "E000494",
+        "E000495",
+        "E000496",
+        "E000497",
+        "E000498",
+        "E000499",
+        "E000500",
+        "E000501",
+        "E000502",
+        "E000503",
+        "E000504",
+        "E000505",
+        "E000506",
+        "E000508",
+        "E000509",
+        "E000510",
+        "E000511",
+        "E000512",
+        "E000513",
+        "E000514",
+        "E000515",
+        "E000516",
+        "E000517",
+        "E000518",
+        "E000519",
+        "E000520",
+        "E000521",
+        "E000522",
+        "E000523",
+        "E000524",
+        "E000525",
+        "E000526",
+        "E000527",
+        "E000528",
+        "E000529",
+        "E000530",
+        "E000531",
+        "E000532",
+        "E000533",
+        "E000534",
+        "E000535",
+        "E000536",
+        "E000537",
+        "E000538",
+        "E000539",
+        "E000540",
+        "E000541",
+        "E000542"
+      ],
+      "tactics": [
+        "Reconnaissance",
+        "Initial Access",
+        "Credential Access",
+        "Execution",
+        "Persistence",
+        "Exfiltration",
+        "Threat Intel Match"
+      ],
+      "techniques": [
+        "T1048",
+        "T1059",
+        "T1078",
+        "T1110",
+        "T1136 / T1098 / T1070.001",
+        "T1190",
+        "T1595.002"
+      ],
+      "rule_ids": [
+        "brute_force",
+        "ioc_match",
+        "large_outbound",
+        "off_hours_login",
+        "sensitive_activity",
+        "success_after_failures",
+        "suspicious_command",
+        "web_attack_payload",
+        "web_scan"
+      ],
+      "sources": [
+        "endpoint_events.json",
+        "firewall.csv",
+        "vpn_auth.csv",
+        "web_access.json"
+      ],
+      "narrative": [
+        "2026-03-13 21:58:00 UTC | Reconnaissance | Web scanning / forced browsing | 62 client-error responses (404) for 203.0.113.45 against web01 in 3m 03s. [F003]",
+        "2026-03-13 22:03:10 UTC | Initial Access | Web attack payload in request | SQL injection pattern in 4 request(s) from 203.0.113.45. 1 returned HTTP 2xx - verify whether the payload had any effect. [F004]",
+        "2026-03-13 22:03:50 UTC | Initial Access | Web attack payload in request | Cross-site scripting pattern in 1 request(s) from 203.0.113.45. No 2xx responses seen. [F005]",
+        "2026-03-13 22:04:10 UTC | Initial Access | Web attack payload in request | Path traversal pattern in 1 request(s) from 203.0.113.45. No 2xx responses seen. [F006]",
+        "2026-03-13 22:15:00 UTC | Credential Access | Repeated failed logins (brute force) | 22 failed logins from 203.0.113.45 against 1 account(s) over 4m 12s. [F007]",
+        "2026-03-13 22:15:00 UTC | Initial Access | Successful login after failures | Account 'user-01' logged in from 203.0.113.45 after 22 failed attempts within 30 min. [F008]",
+        "2026-03-13 22:20:11 UTC | Initial Access | Off-hours login | 'user-01' logged in from 203.0.113.45 at 22:20 UTC on 2026-03-13 (outside 07:00-19:00 UTC). [F009]",
+        "2026-03-13 22:24:40 UTC | Execution | Suspicious command line | Discovery / enumeration on dc01: whoami /all [F010]",
+        "2026-03-13 22:27:03 UTC | Execution | Suspicious command line | Encoded PowerShell on dc01: powershell.exe -nop -w hidden -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFc [F011]",
+        "2026-03-13 22:31:12 UTC | Persistence | Sensitive account / audit activity | Account created on dc01 (1 event(s)): A user account was created: svc_backup2 [F012]",
+        "2026-03-13 22:31:40 UTC | Persistence | Sensitive account / audit activity | Added to privileged group on dc01 (1 event(s)): svc_backup2 was added to the Administrators group [F013]",
+        "2026-03-13 23:10:20 UTC | Threat Intel Match | Event matches recorded IOC | IOC ipv4 '198.51.100.77' appears in 6 event(s) - note: sample. [F014]",
+        "2026-03-13 23:10:20 UTC | Exfiltration | Large outbound transfer | 72.2 MB sent from 10.0.5.20 to external 198.51.100.77 over 29m 45s (6 flow(s)). [F015]",
+        "2026-03-13 23:52:20 UTC | Persistence | Sensitive account / audit activity | Audit log cleared on dc01 (1 event(s)): The audit log was cleared [F016]"
+      ],
+      "remediation": [
+        "Scope the activity: search all other log sources for the same indicator.",
+        "Block the destination IP/domain and capture network evidence.",
+        "Identify what data was on the source host and assess breach-notification duties.",
+        "Disable any account or group membership that was not change-approved.",
+        "Preserve the affected host's logs/disk image before cleanup (evidence).",
+        "Restore audit logging and forward logs off-host so they cannot be wiped locally.",
+        "Isolate the host from the network (EDR containment) pending triage.",
+        "Collect the process tree, memory and the decoded payload for analysis.",
+        "Hunt for the same command pattern on other hosts.",
+        "Block or rate-limit the source IP at the firewall / WAF.",
+        "Enforce account lockout and MFA on the targeted service.",
+        "Verify the login with the account owner or on-call roster.",
+        "Treat the account as potentially compromised: disable it and revoke active sessions/tokens.",
+        "Reset credentials and re-enrol MFA after the account is verified with its owner.",
+        "Review everything the account did after the successful login.",
+        "Block the source at the WAF and review responses (HTTP 200 on a payload warrants deeper review).",
+        "Patch or harden the targeted application and review its database/app logs.",
+        "Rate-limit or block the scanning IP.",
+        "Confirm no discovered path exposes sensitive content."
+      ],
+      "ioc_candidates": [
+        {
+          "ioc_type": "ipv4",
+          "value": "198.51.100.77",
+          "note": "External IP seen in correlated findings"
+        },
+        {
+          "ioc_type": "ipv4",
+          "value": "203.0.113.45",
+          "note": "External IP seen in correlated findings"
+        },
+        {
+          "ioc_type": "username",
+          "value": "user-01",
+          "note": "Account with successful login after failures"
+        }
+      ],
+      "summary": [
+        "14 detection finding(s) from 4 log source(s) were correlated between 2026-03-13 21:58 and 23:52 UTC (1h 54m).",
+        "Observed kill-chain progression: Reconnaissance \u2192 Initial Access \u2192 Credential Access \u2192 Execution \u2192 Persistence \u2192 Exfiltration \u2192 Threat Intel Match.",
+        "22:03:10 \u00b7 SQL injection pattern in 4 request(s) from 203.0.113.45. 1 returned HTTP 2xx - verify whether the payload had any effect.",
+        "22:03:50 \u00b7 Cross-site scripting pattern in 1 request(s) from 203.0.113.45. No 2xx responses seen.",
+        "22:04:10 \u00b7 Path traversal pattern in 1 request(s) from 203.0.113.45. No 2xx responses seen.",
+        "22:15:00 \u00b7 22 failed logins from 203.0.113.45 against 1 account(s) over 4m 12s.",
+        "22:15:00 \u00b7 Account 'user-01' logged in from 203.0.113.45 after 22 failed attempts within 30 min.",
+        "22:27:03 \u00b7 Encoded PowerShell on dc01: powershell.exe -nop -w hidden -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFc",
+        "22:31:12 \u00b7 Account created on dc01 (1 event(s)): A user account was created: svc_backup2",
+        "23:52:20 \u00b7 Audit log cleared on dc01 (1 event(s)): The audit log was cleared",
+        "\u2026and 6 lower-priority finding(s) listed under 'Findings in this incident'.",
+        "Rule-based reconstruction from the imported evidence only; validate the highlighted events before taking action."
+      ],
+      "key": "aec74c349ceb",
+      "effective_confidence": 95,
+      "verdict": "Unreviewed",
+      "response_actions": [
+        {
+          "phase": "Immediate containment",
+          "steps": [
+            "Block the destination IP/domain and capture network evidence.",
+            "Disable any account or group membership that was not change-approved.",
+            "Isolate the host from the network (EDR containment) pending triage.",
+            "Block or rate-limit the source IP at the firewall / WAF.",
+            "Treat the account as potentially compromised: disable it and revoke active sessions/tokens.",
+            "Block the source at the WAF and review responses (HTTP 200 on a payload warrants deeper review).",
+            "Rate-limit or block the scanning IP."
+          ]
+        },
+        {
+          "phase": "Investigation and scoping",
+          "steps": [
+            "Scope the activity: search all other log sources for the same indicator.",
+            "Identify what data was on the source host and assess breach-notification duties.",
+            "Preserve the affected host's logs/disk image before cleanup (evidence).",
+            "Collect the process tree, memory and the decoded payload for analysis.",
+            "Hunt for the same command pattern on other hosts.",
+            "Verify the login with the account owner or on-call roster.",
+            "Review everything the account did after the successful login.",
+            "Confirm no discovered path exposes sensitive content."
+          ]
+        },
+        {
+          "phase": "Recovery and hardening",
+          "steps": [
+            "Restore audit logging and forward logs off-host so they cannot be wiped locally.",
+            "Enforce account lockout and MFA on the targeted service.",
+            "Reset credentials and re-enrol MFA after the account is verified with its owner.",
+            "Patch or harden the targeted application and review its database/app logs."
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-002",
+      "title": "Credential Access activity involving 198.51.100.23",
+      "start": "2026-03-14T03:10:00+00:00",
+      "end": "2026-03-14T03:14:00+00:00",
+      "severity": "high",
+      "confidence": 30,
+      "confidence_label": "Low",
+      "confidence_factors": [
+        [
+          "Baseline for any rule-based finding",
+          20
+        ],
+        [
+          "1 independent detection rule(s) fired",
+          10
+        ]
+      ],
+      "entities": {
+        "ip": [
+          "198.51.100.23"
+        ],
+        "user": [],
+        "host": []
+      },
+      "finding_ids": [
+        "F017"
+      ],
+      "event_ids": [
+        "E000543",
+        "E000544",
+        "E000545",
+        "E000546",
+        "E000547",
+        "E000548",
+        "E000549",
+        "E000550",
+        "E000551",
+        "E000552",
+        "E000553",
+        "E000554",
+        "E000555"
+      ],
+      "tactics": [
+        "Credential Access"
+      ],
+      "techniques": [
+        "T1110.003"
+      ],
+      "rule_ids": [
+        "password_spray"
+      ],
+      "sources": [
+        "vpn_auth.csv"
+      ],
+      "narrative": [
+        "2026-03-14 03:10:00 UTC | Credential Access | Password spraying | 198.51.100.23 failed against 13 distinct accounts (13 attempts) over 4m 00s. [F017]"
+      ],
+      "remediation": [
+        "Block the source IP and review all accounts it targeted.",
+        "Force password reset for any targeted account that later logged in successfully.",
+        "Enable MFA and smart-lockout on the authentication endpoint."
+      ],
+      "ioc_candidates": [
+        {
+          "ioc_type": "ipv4",
+          "value": "198.51.100.23",
+          "note": "External IP seen in correlated findings"
+        }
+      ],
+      "summary": [
+        "1 detection finding(s) from 1 log source(s) were correlated between 2026-03-14 03:10 and 03:14 UTC (4m).",
+        "Observed kill-chain progression: Credential Access.",
+        "03:10:00 \u00b7 198.51.100.23 failed against 13 distinct accounts (13 attempts) over 4m 00s.",
+        "Rule-based reconstruction from the imported evidence only; validate the highlighted events before taking action."
+      ],
+      "key": "b7f08c59a690",
+      "effective_confidence": 30,
+      "verdict": "Unreviewed",
+      "response_actions": [
+        {
+          "phase": "Immediate containment",
+          "steps": [
+            "Block the source IP and review all accounts it targeted.",
+            "Force password reset for any targeted account that later logged in successfully."
+          ]
+        },
+        {
+          "phase": "Recovery and hardening",
+          "steps": [
+            "Enable MFA and smart-lockout on the authentication endpoint."
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-003",
+      "title": "Initial Access activity involving 192.0.2.77, user-02",
+      "start": "2026-03-13T08:37:33+00:00",
+      "end": "2026-03-13T13:33:38+00:00",
+      "severity": "medium",
+      "confidence": 30,
+      "confidence_label": "Low",
+      "confidence_factors": [
+        [
+          "Baseline for any rule-based finding",
+          20
+        ],
+        [
+          "1 independent detection rule(s) fired",
+          10
+        ]
+      ],
+      "entities": {
+        "ip": [
+          "10.0.2.21",
+          "192.0.2.77"
+        ],
+        "user": [
+          "user-02"
+        ],
+        "host": []
+      },
+      "finding_ids": [
+        "F001"
+      ],
+      "event_ids": [
+        "E000058",
+        "E000089",
+        "E000108",
+        "E000133",
+        "E000145",
+        "E000147",
+        "E000161",
+        "E000179",
+        "E000190",
+        "E000211"
+      ],
+      "tactics": [
+        "Initial Access"
+      ],
+      "techniques": [
+        "T1078"
+      ],
+      "rule_ids": [
+        "multi_ip_login"
+      ],
+      "sources": [
+        "vpn_auth.csv"
+      ],
+      "narrative": [
+        "2026-03-13 08:37:33 UTC | Initial Access | Account used from multiple IPs | Account 'user-02' authenticated from 2 IPs (10.0.2.21, 192.0.2.77) within 60 min. [F001]"
+      ],
+      "remediation": [
+        "Confirm with the user whether both locations are legitimate.",
+        "Revoke sessions and require re-authentication if not."
+      ],
+      "ioc_candidates": [
+        {
+          "ioc_type": "ipv4",
+          "value": "192.0.2.77",
+          "note": "External IP seen in correlated findings"
+        }
+      ],
+      "summary": [
+        "1 detection finding(s) from 1 log source(s) were correlated between 2026-03-13 08:37 and 13:33 UTC (4h 56m).",
+        "Observed kill-chain progression: Initial Access.",
+        "08:37:33 \u00b7 Account 'user-02' authenticated from 2 IPs (10.0.2.21, 192.0.2.77) within 60 min.",
+        "Rule-based reconstruction from the imported evidence only; validate the highlighted events before taking action."
+      ],
+      "key": "bd883a95b59a",
+      "effective_confidence": 30,
+      "verdict": "Unreviewed",
+      "response_actions": [
+        {
+          "phase": "Immediate containment",
+          "steps": [
+            "Revoke sessions and require re-authentication if not."
+          ]
+        },
+        {
+          "phase": "Investigation and scoping",
+          "steps": [
+            "Confirm with the user whether both locations are legitimate."
+          ]
+        }
+      ]
+    },
+    {
+      "incident_id": "INC-004",
+      "title": "Reconnaissance activity involving 192.0.2.50",
+      "start": "2026-03-13T14:20:01+00:00",
+      "end": "2026-03-13T14:20:40+00:00",
+      "severity": "medium",
+      "confidence": 30,
+      "confidence_label": "Low",
+      "confidence_factors": [
+        [
+          "Baseline for any rule-based finding",
+          20
+        ],
+        [
+          "1 independent detection rule(s) fired",
+          10
+        ]
+      ],
+      "entities": {
+        "ip": [
+          "192.0.2.50"
+        ],
+        "user": [],
+        "host": []
+      },
+      "finding_ids": [
+        "F002"
+      ],
+      "event_ids": [
+        "E000236",
+        "E000237",
+        "E000238",
+        "E000239",
+        "E000240",
+        "E000241",
+        "E000242",
+        "E000243",
+        "E000244",
+        "E000245",
+        "E000246",
+        "E000247",
+        "E000248",
+        "E000249",
+        "E000250",
+        "E000251",
+        "E000252",
+        "E000253",
+        "E000254",
+        "E000255",
+        "E000256",
+        "E000257",
+        "E000258",
+        "E000259",
+        "E000260",
+        "E000261",
+        "E000262",
+        "E000263",
+        "E000264",
+        "E000265",
+        "E000266",
+        "E000267",
+        "E000268",
+        "E000269",
+        "E000270",
+        "E000271",
+        "E000272",
+        "E000273",
+        "E000274",
+        "E000275"
+      ],
+      "tactics": [
+        "Reconnaissance"
+      ],
+      "techniques": [
+        "T1046"
+      ],
+      "rule_ids": [
+        "port_scan"
+      ],
+      "sources": [
+        "firewall.csv"
+      ],
+      "narrative": [
+        "2026-03-13 14:20:01 UTC | Reconnaissance | Port scan | 192.0.2.50 probed 40 distinct ports on 1 destination(s) in 39s. [F002]"
+      ],
+      "remediation": [
+        "Block the scanning IP.",
+        "Review which scanned services must be exposed at all."
+      ],
+      "ioc_candidates": [
+        {
+          "ioc_type": "ipv4",
+          "value": "192.0.2.50",
+          "note": "External IP seen in correlated findings"
+        }
+      ],
+      "summary": [
+        "1 detection finding(s) from 1 log source(s) were correlated between 2026-03-13 14:20 and 14:20 UTC (0m).",
+        "Observed kill-chain progression: Reconnaissance.",
+        "14:20:01 \u00b7 192.0.2.50 probed 40 distinct ports on 1 destination(s) in 39s.",
+        "Rule-based reconstruction from the imported evidence only; validate the highlighted events before taking action."
+      ],
+      "key": "0c737980a74a",
+      "effective_confidence": 30,
+      "verdict": "Unreviewed",
+      "response_actions": [
+        {
+          "phase": "Immediate containment",
+          "steps": [
+            "Block the scanning IP."
+          ]
+        },
+        {
+          "phase": "Investigation and scoping",
+          "steps": [
+            "Review which scanned services must be exposed at all."
+          ]
+        }
+      ]
+    }
+  ],
+  "key_observations": [
+    {
+      "tactic": "Reconnaissance",
+      "severity": "medium",
+      "text": "192.0.2.50 probed 40 distinct ports on 1 destination(s) in 39s. (+1 more reconnaissance finding)",
+      "refs": "F002, F003"
+    },
+    {
+      "tactic": "Initial Access",
+      "severity": "high",
+      "text": "SQL injection pattern in 4 request(s) from 203.0.113.45. 1 returned HTTP 2xx - verify whether the payload had any effect. (+5 more initial access findings)",
+      "refs": "F001, F004, F005, F006..."
+    },
+    {
+      "tactic": "Credential Access",
+      "severity": "high",
+      "text": "22 failed logins from 203.0.113.45 against 1 account(s) over 4m 12s. (+1 more credential access finding)",
+      "refs": "F007, F017"
+    },
+    {
+      "tactic": "Execution",
+      "severity": "high",
+      "text": "Encoded PowerShell on dc01: powershell.exe -nop -w hidden -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFc (+1 more execution finding)",
+      "refs": "F010, F011"
+    },
+    {
+      "tactic": "Persistence",
+      "severity": "critical",
+      "text": "Audit log cleared on dc01 (1 event(s)): The audit log was cleared (+2 more persistence findings)",
+      "refs": "F012, F013, F016"
+    },
+    {
+      "tactic": "Exfiltration",
+      "severity": "high",
+      "text": "72.2 MB sent from 10.0.5.20 to external 198.51.100.77 over 29m 45s (6 flow(s)).",
+      "refs": "F015"
+    }
+  ],
+  "affected_assets": [
+    {
+      "type": "Account",
+      "value": "user-01",
+      "incidents": "INC-001",
+      "events": 30
+    },
+    {
+      "type": "Account",
+      "value": "user-02",
+      "incidents": "INC-003",
+      "events": 11
+    },
+    {
+      "type": "Host",
+      "value": "dc01",
+      "incidents": "INC-001",
+      "events": 6
+    },
+    {
+      "type": "Internal IP",
+      "value": "10.0.5.20",
+      "incidents": "INC-001",
+      "events": 12
+    },
+    {
+      "type": "Internal IP",
+      "value": "10.0.2.21",
+      "incidents": "INC-003",
+      "events": 9
+    },
+    {
+      "type": "External IP",
+      "value": "203.0.113.45",
+      "incidents": "INC-001",
+      "events": 91
+    },
+    {
+      "type": "External IP",
+      "value": "192.0.2.50",
+      "incidents": "INC-004",
+      "events": 40
+    },
+    {
+      "type": "External IP",
+      "value": "198.51.100.23",
+      "incidents": "INC-002",
+      "events": 13
+    },
+    {
+      "type": "External IP",
+      "value": "198.51.100.77",
+      "incidents": "INC-001",
+      "events": 6
+    },
+    {
+      "type": "External IP",
+      "value": "192.0.2.77",
+      "incidents": "INC-003",
+      "events": 1
+    }
+  ],
+  "techniques": [
+    {
+      "id": "T1046",
+      "name": "Network Service Discovery",
+      "tactics": "Reconnaissance",
+      "findings": 1
+    },
+    {
+      "id": "T1048",
+      "name": "Exfiltration Over Alternative Protocol",
+      "tactics": "Exfiltration",
+      "findings": 1
+    },
+    {
+      "id": "T1059",
+      "name": "Command and Scripting Interpreter",
+      "tactics": "Execution",
+      "findings": 2
+    },
+    {
+      "id": "T1070.001",
+      "name": "Clear Windows Event Logs",
+      "tactics": "Persistence",
+      "findings": 3
+    },
+    {
+      "id": "T1078",
+      "name": "Valid Accounts",
+      "tactics": "Initial Access",
+      "findings": 3
+    },
+    {
+      "id": "T1098",
+      "name": "Account Manipulation",
+      "tactics": "Persistence",
+      "findings": 3
+    },
+    {
+      "id": "T1110",
+      "name": "Brute Force",
+      "tactics": "Credential Access",
+      "findings": 1
+    },
+    {
+      "id": "T1110.003",
+      "name": "Password Spraying",
+      "tactics": "Credential Access",
+      "findings": 1
+    },
+    {
+      "id": "T1136",
+      "name": "Create Account",
+      "tactics": "Persistence",
+      "findings": 3
+    },
+    {
+      "id": "T1190",
+      "name": "Exploit Public-Facing Application",
+      "tactics": "Initial Access",
+      "findings": 3
+    },
+    {
+      "id": "T1595.002",
+      "name": "Vulnerability Scanning",
+      "tactics": "Reconnaissance",
+      "findings": 1
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "F001",
+      "rule_id": "multi_ip_login",
+      "rule_name": "Account used from multiple IPs",
+      "tactic": "Initial Access",
+      "technique": "T1078",
+      "severity": "medium",
+      "start": "2026-03-13T08:37:33.000Z",
+      "end": "2026-03-13T13:33:38.000Z",
+      "count": 10,
+      "summary": "Account 'user-02' authenticated from 2 IPs (10.0.2.21, 192.0.2.77) within 60 min.",
+      "event_ids": [
+        "E000058",
+        "E000089",
+        "E000108",
+        "E000133",
+        "E000145",
+        "E000147",
+        "E000161",
+        "E000179",
+        "E000190",
+        "E000211"
+      ],
+      "src_ip": "10.0.2.21",
+      "user": "user-02",
+      "host": "vpn-gw"
+    },
+    {
+      "finding_id": "F002",
+      "rule_id": "port_scan",
+      "rule_name": "Port scan",
+      "tactic": "Reconnaissance",
+      "technique": "T1046",
+      "severity": "medium",
+      "start": "2026-03-13T14:20:01.000Z",
+      "end": "2026-03-13T14:20:40.000Z",
+      "count": 40,
+      "summary": "192.0.2.50 probed 40 distinct ports on 1 destination(s) in 39s.",
+      "event_ids": [
+        "E000236",
+        "E000237",
+        "E000238",
+        "E000239",
+        "E000240",
+        "E000241",
+        "E000242",
+        "E000243",
+        "E000244",
+        "E000245",
+        "E000246",
+        "E000247",
+        "E000248",
+        "E000249",
+        "E000250",
+        "E000251",
+        "E000252",
+        "E000253",
+        "E000254",
+        "E000255",
+        "E000256",
+        "E000257",
+        "E000258",
+        "E000259",
+        "E000260",
+        "E000261",
+        "E000262",
+        "E000263",
+        "E000264",
+        "E000265",
+        "E000266",
+        "E000267",
+        "E000268",
+        "E000269",
+        "E000270",
+        "E000271",
+        "E000272",
+        "E000273",
+        "E000274",
+        "E000275"
+      ],
+      "src_ip": "192.0.2.50",
+      "user": "",
+      "host": ""
+    },
+    {
+      "finding_id": "F003",
+      "rule_id": "web_scan",
+      "rule_name": "Web scanning / forced browsing",
+      "tactic": "Reconnaissance",
+      "technique": "T1595.002",
+      "severity": "medium",
+      "start": "2026-03-13T21:58:00.000Z",
+      "end": "2026-03-13T22:01:03.000Z",
+      "count": 62,
+      "summary": "62 client-error responses (404) for 203.0.113.45 against web01 in 3m 03s.",
+      "event_ids": [
+        "E000439",
+        "E000440",
+        "E000441",
+        "E000442",
+        "E000443",
+        "E000444",
+        "E000445",
+        "E000446",
+        "E000447",
+        "E000448",
+        "E000449",
+        "E000450",
+        "E000451",
+        "E000452",
+        "E000453",
+        "E000454",
+        "E000455",
+        "E000456",
+        "E000457",
+        "E000458",
+        "E000459",
+        "E000460",
+        "E000461",
+        "E000462",
+        "E000463",
+        "E000464",
+        "E000465",
+        "E000466",
+        "E000467",
+        "E000468",
+        "E000469",
+        "E000470",
+        "E000471",
+        "E000472",
+        "E000473",
+        "E000474",
+        "E000475",
+        "E000476",
+        "E000477",
+        "E000478",
+        "E000479",
+        "E000480",
+        "E000481",
+        "E000482",
+        "E000483",
+        "E000484",
+        "E000485",
+        "E000486",
+        "E000487",
+        "E000488",
+        "E000489",
+        "E000490",
+        "E000491",
+        "E000492",
+        "E000493",
+        "E000494",
+        "E000495",
+        "E000496",
+        "E000497",
+        "E000498",
+        "E000499",
+        "E000500"
+      ],
+      "src_ip": "203.0.113.45",
+      "user": "",
+      "host": "web01"
+    },
+    {
+      "finding_id": "F004",
+      "rule_id": "web_attack_payload",
+      "rule_name": "Web attack payload in request",
+      "tactic": "Initial Access",
+      "technique": "T1190",
+      "severity": "high",
+      "start": "2026-03-13T22:03:10.000Z",
+      "end": "2026-03-13T22:04:50.000Z",
+      "count": 4,
+      "summary": "SQL injection pattern in 4 request(s) from 203.0.113.45. 1 returned HTTP 2xx - verify whether the payload had any effect.",
+      "event_ids": [
+        "E000501",
+        "E000502",
+        "E000505",
+        "E000506"
+      ],
+      "src_ip": "203.0.113.45",
+      "user": "",
+      "host": "web01"
+    },
+    {
+      "finding_id": "F005",
+      "rule_id": "web_attack_payload",
+      "rule_name": "Web attack payload in request",
+      "tactic": "Initial Access",
+      "technique": "T1190",
+      "severity": "high",
+      "start": "2026-03-13T22:03:50.000Z",
+      "end": "2026-03-13T22:03:50.000Z",
+      "count": 1,
+      "summary": "Cross-site scripting pattern in 1 request(s) from 203.0.113.45. No 2xx responses seen.",
+      "event_ids": [
+        "E000503"
+      ],
+      "src_ip": "203.0.113.45",
+      "user": "",
+      "host": "web01"
+    },
+    {
+      "finding_id": "F006",
+      "rule_id": "web_attack_payload",
+      "rule_name": "Web attack payload in request",
+      "tactic": "Initial Access",
+      "technique": "T1190",
+      "severity": "high",
+      "start": "2026-03-13T22:04:10.000Z",
+      "end": "2026-03-13T22:04:10.000Z",
+      "count": 1,
+      "summary": "Path traversal pattern in 1 request(s) from 203.0.113.45. No 2xx responses seen.",
+      "event_ids": [
+        "E000504"
+      ],
+      "src_ip": "203.0.113.45",
+      "user": "",
+      "host": "web01"
+    },
+    {
+      "finding_id": "F007",
+      "rule_id": "brute_force",
+      "rule_name": "Repeated failed logins (brute force)",
+      "tactic": "Credential Access",
+      "technique": "T1110",
+      "severity": "high",
+      "start": "2026-03-13T22:15:00.000Z",
+      "end": "2026-03-13T22:19:12.000Z",
+      "count": 22,
+      "summary": "22 failed logins from 203.0.113.45 against 1 account(s) over 4m 12s.",
+      "event_ids": [
+        "E000508",
+        "E000509",
+        "E000510",
+        "E000511",
+        "E000512",
+        "E000513",
+        "E000514",
+        "E000515",
+        "E000516",
+        "E000517",
+        "E000518",
+        "E000519",
+        "E000520",
+        "E000521",
+        "E000522",
+        "E000523",
+        "E000524",
+        "E000525",
+        "E000526",
+        "E000527",
+        "E000528",
+        "E000529"
+      ],
+      "src_ip": "203.0.113.45",
+      "user": "user-01",
+      "host": "vpn-gw"
+    },
+    {
+      "finding_id": "F008",
+      "rule_id": "success_after_failures",
+      "rule_name": "Successful login after failures",
+      "tactic": "Initial Access",
+      "technique": "T1078",
+      "severity": "high",
+      "start": "2026-03-13T22:15:00.000Z",
+      "end": "2026-03-13T22:20:11.000Z",
+      "count": 23,
+      "summary": "Account 'user-01' logged in from 203.0.113.45 after 22 failed attempts within 30 min.",
+      "event_ids": [
+        "E000508",
+        "E000509",
+        "E000510",
+        "E000511",
+        "E000512",
+        "E000513",
+        "E000514",
+        "E000515",
+        "E000516",
+        "E000517",
+        "E000518",
+        "E000519",
+        "E000520",
+        "E000521",
+        "E000522",
+        "E000523",
+        "E000524",
+        "E000525",
+        "E000526",
+        "E000527",
+        "E000528",
+        "E000529",
+        "E000530"
+      ],
+      "src_ip": "203.0.113.45",
+      "user": "user-01",
+      "host": "vpn-gw"
+    },
+    {
+      "finding_id": "F009",
+      "rule_id": "off_hours_login",
+      "rule_name": "Off-hours login",
+      "tactic": "Initial Access",
+      "technique": "T1078",
+      "severity": "low",
+      "start": "2026-03-13T22:20:11.000Z",
+      "end": "2026-03-13T22:20:11.000Z",
+      "count": 1,
+      "summary": "'user-01' logged in from 203.0.113.45 at 22:20 UTC on 2026-03-13 (outside 07:00-19:00 UTC).",
+      "event_ids": [
+        "E000530"
+      ],
+      "src_ip": "203.0.113.45",
+      "user": "user-01",
+      "host": "vpn-gw"
+    },
+    {
+      "finding_id": "F010",
+      "rule_id": "suspicious_command",
+      "rule_name": "Suspicious command line",
+      "tactic": "Execution",
+      "technique": "T1059",
+      "severity": "medium",
+      "start": "2026-03-13T22:24:40.000Z",
+      "end": "2026-03-13T22:25:05.000Z",
+      "count": 2,
+      "summary": "Discovery / enumeration on dc01: whoami /all",
+      "event_ids": [
+        "E000531",
+        "E000532"
+      ],
+      "src_ip": "10.0.5.20",
+      "user": "user-01",
+      "host": "dc01"
+    },
+    {
+      "finding_id": "F011",
+      "rule_id": "suspicious_command",
+      "rule_name": "Suspicious command line",
+      "tactic": "Execution",
+      "technique": "T1059",
+      "severity": "high",
+      "start": "2026-03-13T22:27:03.000Z",
+      "end": "2026-03-13T22:27:03.000Z",
+      "count": 1,
+      "summary": "Encoded PowerShell on dc01: powershell.exe -nop -w hidden -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFc",
+      "event_ids": [
+        "E000533"
+      ],
+      "src_ip": "10.0.5.20",
+      "user": "user-01",
+      "host": "dc01"
+    },
+    {
+      "finding_id": "F012",
+      "rule_id": "sensitive_activity",
+      "rule_name": "Sensitive account / audit activity",
+      "tactic": "Persistence",
+      "technique": "T1136 / T1098 / T1070.001",
+      "severity": "high",
+      "start": "2026-03-13T22:31:12.000Z",
+      "end": "2026-03-13T22:31:12.000Z",
+      "count": 1,
+      "summary": "Account created on dc01 (1 event(s)): A user account was created: svc_backup2",
+      "event_ids": [
+        "E000534"
+      ],
+      "src_ip": "10.0.5.20",
+      "user": "user-01",
+      "host": "dc01"
+    },
+    {
+      "finding_id": "F013",
+      "rule_id": "sensitive_activity",
+      "rule_name": "Sensitive account / audit activity",
+      "tactic": "Persistence",
+      "technique": "T1136 / T1098 / T1070.001",
+      "severity": "high",
+      "start": "2026-03-13T22:31:40.000Z",
+      "end": "2026-03-13T22:31:40.000Z",
+      "count": 1,
+      "summary": "Added to privileged group on dc01 (1 event(s)): svc_backup2 was added to the Administrators group",
+      "event_ids": [
+        "E000535"
+      ],
+      "src_ip": "10.0.5.20",
+      "user": "user-01",
+      "host": "dc01"
+    },
+    {
+      "finding_id": "F014",
+      "rule_id": "ioc_match",
+      "rule_name": "Event matches recorded IOC",
+      "tactic": "Threat Intel Match",
+      "technique": "n/a",
+      "severity": "high",
+      "start": "2026-03-13T23:10:20.000Z",
+      "end": "2026-03-13T23:40:05.000Z",
+      "count": 6,
+      "summary": "IOC ipv4 '198.51.100.77' appears in 6 event(s) - note: sample.",
+      "event_ids": [
+        "E000536",
+        "E000537",
+        "E000538",
+        "E000539",
+        "E000540",
+        "E000541"
+      ],
+      "src_ip": "10.0.5.20",
+      "user": "",
+      "host": ""
+    },
+    {
+      "finding_id": "F015",
+      "rule_id": "large_outbound",
+      "rule_name": "Large outbound transfer",
+      "tactic": "Exfiltration",
+      "technique": "T1048",
+      "severity": "high",
+      "start": "2026-03-13T23:10:20.000Z",
+      "end": "2026-03-13T23:40:05.000Z",
+      "count": 6,
+      "summary": "72.2 MB sent from 10.0.5.20 to external 198.51.100.77 over 29m 45s (6 flow(s)).",
+      "event_ids": [
+        "E000536",
+        "E000537",
+        "E000538",
+        "E000539",
+        "E000540",
+        "E000541"
+      ],
+      "src_ip": "10.0.5.20",
+      "user": "",
+      "host": ""
+    },
+    {
+      "finding_id": "F016",
+      "rule_id": "sensitive_activity",
+      "rule_name": "Sensitive account / audit activity",
+      "tactic": "Persistence",
+      "technique": "T1136 / T1098 / T1070.001",
+      "severity": "critical",
+      "start": "2026-03-13T23:52:20.000Z",
+      "end": "2026-03-13T23:52:20.000Z",
+      "count": 1,
+      "summary": "Audit log cleared on dc01 (1 event(s)): The audit log was cleared",
+      "event_ids": [
+        "E000542"
+      ],
+      "src_ip": "10.0.5.20",
+      "user": "user-01",
+      "host": "dc01"
+    },
+    {
+      "finding_id": "F017",
+      "rule_id": "password_spray",
+      "rule_name": "Password spraying",
+      "tactic": "Credential Access",
+      "technique": "T1110.003",
+      "severity": "high",
+      "start": "2026-03-14T03:10:00.000Z",
+      "end": "2026-03-14T03:14:00.000Z",
+      "count": 13,
+      "summary": "198.51.100.23 failed against 13 distinct accounts (13 attempts) over 4m 00s.",
+      "event_ids": [
+        "E000543",
+        "E000544",
+        "E000545",
+        "E000546",
+        "E000547",
+        "E000548",
+        "E000549",
+        "E000550",
+        "E000551",
+        "E000552",
+        "E000553",
+        "E000554",
+        "E000555"
+      ],
+      "src_ip": "198.51.100.23",
+      "user": "user-01",
+      "host": "vpn-gw"
+    }
+  ],
+  "iocs": [
+    {
+      "id": 1,
+      "ioc_type": "ipv4",
+      "value": "198.51.100.77",
+      "source": "Sample Analyst",
+      "note": "sample",
+      "added_utc": "2026-11-05 10:25:15"
+    }
+  ],
+  "tlp": "TLP:AMBER",
+  "handling": "Limited disclosure. Recipients may share only within their organisation and with clients who need to know.",
+  "redaction": null,
+  "evidence_verification": {
+    "checked_utc": "2026-11-05 10:25:16",
+    "ok": true,
+    "files": 4,
+    "problems": []
+  },
+  "audit_log": {
+    "entries": 9,
+    "head_hash": "45f1d5fe9b4517a3aa77867e41c9f4a524227686ad89127060893a5b681e1e5a",
+    "chain_ok": true
+  }
+}

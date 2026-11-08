@@ -1,0 +1,10 @@
+.git
+__pycache__
+*.pyc
+traceforge_data
+evidence
+*.db
+.env
+tests
+docs
+lab_data

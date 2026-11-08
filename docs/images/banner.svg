@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 330" width="1200" height="330" role="img" aria-label="TraceForge: incident reconstruction and IOC correlation workbench">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220"/><stop offset="1" stop-color="#14263F"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2DD4BF"/><stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1E3A5F" stroke-width="0.6" opacity="0.55"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="330" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="330" rx="18" fill="url(#grid)"/>
+  <rect x="0" y="0" width="1200" height="6" rx="3" fill="url(#accent)"/>
+
+  <!-- mark -->
+  <g transform="translate(70 62)">
+    <rect width="76" height="76" rx="16" fill="#0F2A44" stroke="url(#accent)" stroke-width="2.5"/>
+    <path d="M20 24H56M38 24V58" stroke="#2DD4BF" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <circle cx="56" cy="58" r="5" fill="#38BDF8"/>
+  </g>
+  <text x="170" y="112" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="58" font-weight="700" fill="#F1F5F9" letter-spacing="1">TraceForge</text>
+  <text x="172" y="146" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" fill="#94A3B8">Incident reconstruction &amp; IOC correlation workbench</text>
+
+  <!-- pipeline -->
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" text-anchor="middle">
+    <g transform="translate(70 196)">
+      <rect width="150" height="46" rx="10" fill="#0F2A44" stroke="#2DD4BF"/><text x="75" y="29" fill="#E2E8F0">Ingest</text>
+    </g>
+    <g transform="translate(250 196)">
+      <rect width="150" height="46" rx="10" fill="#0F2A44" stroke="#2DD4BF"/><text x="75" y="29" fill="#E2E8F0">Normalise</text>
+    </g>
+    <g transform="translate(430 196)">
+      <rect width="150" height="46" rx="10" fill="#0F2A44" stroke="#38BDF8"/><text x="75" y="29" fill="#E2E8F0">Detect</text>
+    </g>
+    <g transform="translate(610 196)">
+      <rect width="150" height="46" rx="10" fill="#0F2A44" stroke="#38BDF8"/><text x="75" y="29" fill="#E2E8F0">Correlate</text>
+    </g>
+    <g transform="translate(790 196)">
+      <rect width="150" height="46" rx="10" fill="#0F2A44" stroke="#818CF8"/><text x="75" y="29" fill="#E2E8F0">Triage</text>
+    </g>
+    <g transform="translate(970 196)">
+      <rect width="160" height="46" rx="10" fill="#0F2A44" stroke="#818CF8"/><text x="80" y="29" fill="#E2E8F0">Report</text>
+    </g>
+  </g>
+  <g stroke="#475569" stroke-width="2" fill="none">
+    <path d="M222 219H248M402 219H428M582 219H608M762 219H788M942 219H968"/>
+  </g>
+
+  <text x="70" y="290" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" fill="#64748B">Local-first  ·  evidence-hashed  ·  Sigma + MITRE ATT&amp;CK  ·  STIX 2.1  ·  no data leaves the machine</text>
+</svg>

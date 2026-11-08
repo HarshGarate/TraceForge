@@ -1,0 +1,7 @@
+title: Aggregation Rule (importer must skip this with a reason)
+id: 5a3d1c10-0000-4000-8000-000000000003
+level: low
+detection:
+  selection:
+    EventID: 4625
+  condition: selection | count() by IpAddress > 10

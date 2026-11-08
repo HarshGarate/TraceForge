@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use TraceForge in research or teaching, please cite it as below."
+title: "TraceForge: Incident Reconstruction and IOC Correlation Workbench"
+type: software
+authors:
+  - family-names: Garate
+    given-names: Harsh
+version: 1.2.0
+license: MIT
+repository-code: "https://github.com/YOUR-USERNAME/traceforge"
+keywords: [incident-response, dfir, log-analysis, ioc, sigma, mitre-attack, soc]

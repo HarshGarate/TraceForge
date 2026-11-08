@@ -1,0 +1,14 @@
+{"@timestamp": "2026-03-10T05:00:00Z", "source": {"ip": "203.0.113.16"}, "user": {"name": "user-10"}, "event": {"action": "login-failed"}, "host": {"name": "sso01"}, "message": "authentication failed"}
+{"@timestamp": "2026-03-10T05:00:30Z", "source": {"ip": "203.0.113.16"}, "user": {"name": "user-10"}, "event": {"action": "login-failed"}, "host": {"name": "sso01"}, "message": "authentication failed"}
+{"@timestamp": "2026-03-10T05:01:00Z", "source": {"ip": "203.0.113.16"}, "user": {"name": "user-10"}, "event": {"action": "login-failed"}, "host": {"name": "sso01"}, "message": "authentication failed"}
+{"@timestamp": "2026-03-10T05:01:30Z", "source": {"ip": "203.0.113.16"}, "user": {"name": "user-10"}, "event": {"action": "login-failed"}, "host": {"name": "sso01"}, "message": "authentication failed"}
+{"@timestamp": "2026-03-10T05:02:00Z", "source": {"ip": "203.0.113.16"}, "user": {"name": "user-10"}, "event": {"action": "login-failed"}, "host": {"name": "sso01"}, "message": "authentication failed"}
+{"@timestamp": "2026-03-10T05:02:30Z", "source": {"ip": "203.0.113.16"}, "user": {"name": "user-10"}, "event": {"action": "login-failed"}, "host": {"name": "sso01"}, "message": "authentication failed"}
+{"@timestamp": "2026-03-10T05:03:00Z", "source": {"ip": "203.0.113.16"}, "user": {"name": "user-10"}, "event": {"action": "login-failed"}, "host": {"name": "sso01"}, "message": "authentication failed"}
+{"@timestamp": "2026-03-10T05:03:30Z", "source": {"ip": "203.0.113.16"}, "user": {"name": "user-10"}, "event": {"action": "login-failed"}, "host": {"name": "sso01"}, "message": "authentication failed"}
+{"@timestamp": "2026-03-10T05:04:00Z", "source": {"ip": "203.0.113.16"}, "user": {"name": "user-10"}, "event": {"action": "login-failed"}, "host": {"name": "sso01"}, "message": "authentication failed"}
+{"@timestamp": "2026-03-10T05:06:00Z", "source": {"ip": "203.0.113.16"}, "user": {"name": "user-10"}, "event": {"action": "login-success"}, "host": {"name": "sso01"}}
+{"@timestamp": "2026-03-10T09:00:00Z", "source": {"ip": "10.0.1.40"}, "user": {"name": "user-01"}, "event": {"action": "login-success"}, "host": {"name": "sso01"}}
+{"@timestamp": "2026-03-10T09:10:00Z", "source": {"ip": "10.0.1.41"}, "user": {"name": "user-02"}, "event": {"action": "login-success"}, "host": {"name": "sso01"}}
+{"@timestamp": "2026-03-10T09:20:00Z", "source": {"ip": "10.0.1.42"}, "user": {"name": "user-03"}, "event": {"action": "login-success"}, "host": {"name": "sso01"}}
+{"@timestamp": "2026-03-10T09:30:00Z", "source": {"ip": "10.0.1.43"}, "user": {"name": "user-04"}, "event": {"action": "login-success"}, "host": {"name": "sso01"}}

@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+*.db
+*.sqlite
+data/
+.env
+.DS_Store
+# never commit real evidence:
+logs/
+evidence/
+.coverage
+htmlcov/
+build/
+*.egg-info/
+traceforge_data/

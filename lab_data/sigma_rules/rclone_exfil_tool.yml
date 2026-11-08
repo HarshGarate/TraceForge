@@ -1,0 +1,11 @@
+title: Rclone Used To Copy Data To Remote Storage
+id: 5a3d1c10-0000-4000-8000-000000000001
+status: experimental
+description: Detects use of rclone to copy local data to a remote target
+tags: [attack.exfiltration, attack.t1567.002]
+level: high
+falsepositives: [Approved backup jobs]
+detection:
+  selection:
+    CommandLine|contains|all: ['rclone', ' copy ']
+  condition: selection

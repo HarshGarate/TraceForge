@@ -1,0 +1,15 @@
+timestamp,src_ip,dst_ip,user,event_type,message,extra_notes,ticket_id
+2026-03-10T09:00:00Z,10.0.0.5,10.0.0.9,user-01,login_success,valid row,keeps extra columns,T-1
+2026-03-10 09:01:00,10.0.0.5,10.0.0.9,user-01,login_success,space separator instead of T,,T-2
+2026-03-10T14:32:00+05:30,10.0.0.6,10.0.0.9,user-02,login_success,offset converted to UTC (09:02Z),,T-3
+10/Mar/2026:09:03:00 +0000,10.0.0.7,10.0.0.9,user-03,login_success,apache-style stamp inside a CSV timestamp column is not parsed: counted and dropped,,T-4
+1773133440,10.0.0.8,10.0.0.9,user-04,login_success,epoch string inside the timestamp column is not parsed: counted and dropped,,T-5
+not-a-date,10.0.0.9,10.0.0.9,user-05,login_failure,bad timestamp: counted then dropped,,T-6
+,10.0.0.9,10.0.0.9,user-05,login_failure,empty timestamp: counted then dropped,,T-7
+2026-03-10T09:06:00Z,999.999.1.1,10.0.0.9,user-06,login_failure,invalid source IP is cleared and counted,,T-8
+2026-03-10T09:07:00Z,,,user-07,login_failure,no network fields at all,,T-9
+2026-03-10T09:08:00Z,2001:db8::1,10.0.0.9,user-08,login_success,IPv6 source,,T-10
+
+2026-03-10T09:09:00Z,10.0.0.10,10.0.0.9,  USER-09  ,LOGIN_SUCCESS,whitespace and case normalised,,T-11
+2026-03-10T09:10:00Z,10.0.0.11,10.0.0.9,user-10,login_success,"comma, inside a quoted message",,T-12
+2026-03-10T09:11:00Z,10.0.0.12,10.0.0.9,usér-11,login_success,unicode in user name,,T-13

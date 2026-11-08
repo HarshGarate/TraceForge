@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.png binary
+*.pdf binary
+*.zip binary
+*.gz binary
+traceforge/sample_data/* text eol=lf
+tests/fixtures/* text eol=lf
+lab_data/* text eol=lf
+lab_data/*.zip binary
+lab_data/*.gz binary

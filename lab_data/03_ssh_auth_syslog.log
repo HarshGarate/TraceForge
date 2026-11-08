@@ -1,0 +1,17 @@
+Mar 10 03:00:00 bastion01 sshd[2211]: Failed password for root from 203.0.113.12 port 40000 ssh2
+Mar 10 03:00:20 bastion01 sshd[2211]: Failed password for root from 203.0.113.12 port 40001 ssh2
+Mar 10 03:00:40 bastion01 sshd[2211]: Failed password for root from 203.0.113.12 port 40002 ssh2
+Mar 10 03:01:00 bastion01 sshd[2211]: Failed password for root from 203.0.113.12 port 40003 ssh2
+Mar 10 03:01:20 bastion01 sshd[2211]: Failed password for root from 203.0.113.12 port 40004 ssh2
+Mar 10 03:01:40 bastion01 sshd[2211]: Failed password for root from 203.0.113.12 port 40005 ssh2
+Mar 10 03:02:00 bastion01 sshd[2211]: Failed password for root from 203.0.113.12 port 40006 ssh2
+Mar 10 03:02:20 bastion01 sshd[2211]: Failed password for root from 203.0.113.12 port 40007 ssh2
+Mar 10 03:10:00 bastion01 sshd[2230]: Failed password for invalid user oracle from 203.0.113.13 port 41000 ssh2
+Mar 10 03:10:30 bastion01 sshd[2230]: Failed password for invalid user postgres from 203.0.113.13 port 41001 ssh2
+Mar 10 03:11:00 bastion01 sshd[2230]: Failed password for invalid user ubuntu from 203.0.113.13 port 41002 ssh2
+Mar 10 03:11:30 bastion01 sshd[2230]: Failed password for invalid user git from 203.0.113.13 port 41003 ssh2
+Mar 10 03:12:00 bastion01 sshd[2230]: Failed password for invalid user test from 203.0.113.13 port 41004 ssh2
+Mar 10 03:12:00 bastion01 sshd[2299]: Accepted password for root from 203.0.113.12 port 40100 ssh2
+Mar 10 03:12:30 bastion01 sshd[2230]: Failed password for invalid user deploy from 203.0.113.13 port 41005 ssh2
+Mar 10 09:15:00 bastion01 sshd[2400]: Accepted publickey for user-02 from 10.0.1.31 port 52000 ssh2
+Mar 10 09:20:00 bastion01 useradd[2410]: new user: name=svc_tmp, UID=1099
