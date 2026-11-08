@@ -5,5 +5,5 @@ pandas>=2.2
 numpy>=1.26
 reportlab>=4.2
 matplotlib>=3.8
-PyYAML>=6.0
+PyYAML>=6.0.3
 cryptography>=42
